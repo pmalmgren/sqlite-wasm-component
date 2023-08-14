@@ -1,0 +1,15 @@
+// wit/host.wit
+package example:host
+
+interface db {
+  record person {
+    name: string
+  }
+}
+
+world host {
+  export db
+  use db.{person}
+
+  export get-person: func() -> person
+}

@@ -1,0 +1,14 @@
+import type { Person } from '../imports/example-host-db';
+export { Person };
+import { ExampleHostDb } from './imports/example-host-db';
+import { WasiCliBaseEnvironment } from './imports/wasi-cli-base-environment';
+import { WasiCliBaseExit } from './imports/wasi-cli-base-exit';
+import { WasiCliBaseStderr } from './imports/wasi-cli-base-stderr';
+import { WasiCliBaseStdin } from './imports/wasi-cli-base-stdin';
+import { WasiCliBaseStdout } from './imports/wasi-cli-base-stdout';
+import { WasiFilesystemPreopens } from './imports/wasi-filesystem-preopens';
+import { WasiFilesystemTypes } from './imports/wasi-filesystem-types';
+import { WasiIoStreams } from './imports/wasi-io-streams';
+import { ExampleHostDb1 } from './exports/example-host-db';
+export const db: typeof ExampleHostDb1;
+export function getPerson(): Person;
