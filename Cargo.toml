@@ -1,5 +1,5 @@
 [package]
-name = "example"
+name = "sqlite-component"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,4 +9,5 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-wit-bindgen = "0.9.0"
+wit-bindgen = "0.8.0"
+rusqlite = { version = "0.29.0", features = ["wasm32-wasi-vfs", "bundled"] }

@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["WebWorker", "Webworker.Iterable", "ES2016", "ESNext.AsyncIterable"],
+  },
+  "files": ["service-worker.ts"]
+}

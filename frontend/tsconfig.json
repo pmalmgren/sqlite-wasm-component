@@ -1,26 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    "compilerOptions": {
+      "outDir": "build",
+      "jsx": "react-jsx", // Support JSX in .tsx files
+      "allowJs": true,
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ], // List of library files to be included in the compilation
+      "module": "esnext", // Specify module code generation
+      "moduleResolution": "node", // Resolve modules using Node.js style
+      "target": "ES2016", // Specify ECMAScript target version,
+    },
+    "include": [
+      "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx" // *** The files TypeScript should type check ***
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
-}
+    "exclude": ["node_modules", "build", "src/wasm/imports/poll.d.ts", "src/worker/service-worker.ts"] // *** The files to not type check ***
+  }

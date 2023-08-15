@@ -1,15 +1,47 @@
 // wit/host.wit
-package example:host
+package sqlite3-wasm-vfs:vfs
 
-interface db {
-  record person {
-    name: string
+interface types {
+  type sqlite-error = s32
+  type sqlite-db = s32
+  type file-id = s32
+  flags open-flags {
+    readonly,
+    readwrite,
+    create,
+    deleteonclose,
+    exclusive,
+    autoproxy,
+    uri,
+    memory,
+    main-db,
+    temp-db,
+    transient-db,
+    main-journal,
+    temp-journal,
+    subjournal,
+    super-journal,
+    nomutex,
+    fullmutex,
+    privatecache,
+    wal,
+    nofollow,
+    exrescode,
   }
 }
 
-world host {
-  export db
-  use db.{person}
+interface imports {
+  use types.{sqlite-error, open-flags, file-id}
 
-  export get-person: func() -> person
+  log: func(msg: string)
+  vfs-open: func(name: string, id: file-id, in-flags: open-flags) -> result<open-flags, sqlite-error>
+}
+
+world vfs {
+  use types.{sqlite-db, sqlite-error}
+  export init: func()
+  export sqlite-open: func(name: string, vfs: string) -> result<sqlite-db, sqlite-error>
+  export register-vfs: func(name: string)
+  export debug-vfs: func(vfs-ptr: s32)
+  import imports
 }
