@@ -1,4 +1,8 @@
-# Usage
+# README
+
+## What is this?
+
+A super minimal MVP of getting SQLite to run in the browser using WASI and WebAssembly Components.
 
 ## Prerequisites
 
