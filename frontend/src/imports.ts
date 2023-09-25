@@ -1,4 +1,4 @@
-import type { OpenFlags } from "./wasm/imports/types";
+import type { OpenFlags } from "./wasm/interfaces/sqlite3-wasm-vfs-vfs-types";
 
 const log = (out: string) => {
   console.log(out);

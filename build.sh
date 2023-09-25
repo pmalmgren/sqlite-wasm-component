@@ -17,5 +17,4 @@ export LIBSQLITE3_FLAGS="\
 
 cargo build --target "wasm32-wasi"
 
-wasm-tools component new ./target/wasm32-wasi/debug/sqlite_component.wasm -o sqlite-component.wasm \
-    --adapt ./wasi_snapshot_preview1.wasm
+cp ./target/wasm32-wasi/debug/sqlite_component.wasm sqlite-component-core.wasm

@@ -4,5 +4,6 @@ node_modules
 *.wat
 sqlite3.wasm
 example.wasm
+sqlite-component-core.wasm
 sqlite-component.wasm
 frontend/src/wasm

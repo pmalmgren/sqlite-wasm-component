@@ -1,4 +1,4 @@
-import type { OpenFlags } from "../wasm/imports/types";
+import type { OpenFlags } from "../wasm/interfaces/sqlite3-wasm-vfs-vfs-types";
 import { setWorkerState, getWorkerState } from "./state";
 
 const log = (out: string) => {

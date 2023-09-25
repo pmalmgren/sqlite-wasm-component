@@ -23,11 +23,11 @@ devDependencies:
     specifier: ^7.22.5
     version: 7.22.5(@babel/core@7.22.10)
   '@bytecodealliance/jco':
-    specifier: 0.9.0
-    version: 0.9.0
+    specifier: 0.12.1
+    version: 0.12.1
   '@bytecodealliance/preview2-shim':
-    specifier: 0.0.9
-    version: 0.0.9
+    specifier: 0.0.16
+    version: 0.0.16
   '@types/node':
     specifier: ^20.5.0
     version: 20.5.0
@@ -1296,11 +1296,11 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@bytecodealliance/jco@0.9.0:
-    resolution: {integrity: sha512-bCutRuXmvDztugz+VQiZzuQ87SDeSBvtoqbXKusi0sDACRIksVeA5KQFZwmeI8UcLnIcjdimmmlA95TMr3GyqQ==}
+  /@bytecodealliance/jco@0.12.1:
+    resolution: {integrity: sha512-hU/8GzkPmgzHA/HDiyRWZWX2rQ/os3jMybqCF6sik1WPfUVXUKlUornkt7UAv54o+i8hhHrU6QhohiYFo3b+2w==}
     hasBin: true
     dependencies:
-      '@bytecodealliance/preview2-shim': 0.0.9
+      '@bytecodealliance/preview2-shim': 0.0.16
       binaryen: 111.0.0
       chalk-template: 0.4.0
       commander: 9.5.0
@@ -1309,8 +1309,8 @@ packages:
       terser: 5.19.2
     dev: true
 
-  /@bytecodealliance/preview2-shim@0.0.9:
-    resolution: {integrity: sha512-sXhKMroekmhPYndRAr3XQBom9O9MYZR2fey6gqIoEvP4Wlv+tZRRE2oS+P7rcQuPcegUoaQvpKUHEFkEwapHfQ==}
+  /@bytecodealliance/preview2-shim@0.0.16:
+    resolution: {integrity: sha512-mUaEDKUDjiCGcr1BbS7ka0yxkd2pNINcXIK5rXu3EVJ1A04dcZvqnhbMhiqekszwx/qtOPpLL6Jg+91ULpjN0g==}
     dev: true
 
   /@discoveryjs/json-ext@0.5.7:
